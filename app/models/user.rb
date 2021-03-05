@@ -9,4 +9,6 @@ class User < ApplicationRecord
 
   acts_as_favoritor
   acts_as_favoritable
+
+  has_many :rooms
 end
