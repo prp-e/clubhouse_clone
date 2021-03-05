@@ -15,7 +15,8 @@ _TO BE UPDATED_
 ## TODO 
 
 - [ ] Designing timeline, follower/following in the frontend side 
-- [ ] Connecting the whole thing to the _BBB_ instance (It should be done in some environment variable, maybe a `.env` file isn't a bad idea at all)
+- [x] Connecting the whole thing to the _BBB_ instance (It should be done in some environment variable, maybe a `.env` file isn't a bad idea at all)
+    - [ ] Joining Mechanism
 - [ ] Migrating to MySQL 
 - [ ] Designing a nice UI 
 - [ ] Implementing the UI
