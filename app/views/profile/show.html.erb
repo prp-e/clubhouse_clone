@@ -1,11 +1,12 @@
 <div class="main-container">
   <!-- Profile background large image -->
   <div class="row profile-background">
+    <img src="/header.jpg" width=1024px height=320px>
     <div class="container">
 	  <!-- User main avatar -->
       <div class="avatar-container">
         <div class="avatar">
-            <img src=<%="https://secure.gravatar.com/avatar/#{Digest::MD5.hexdigest(@user.email)}"%> width=150px height=150px />
+            <img class="avatar" src=<%="https://secure.gravatar.com/avatar/#{Digest::MD5.hexdigest(@user.email)}"%>  />
         </div>
       </div>
     </div>
