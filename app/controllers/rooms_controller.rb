@@ -29,7 +29,9 @@ class RoomsController < ApplicationController
       :description => params[:room][:description],
       :meetingID => meeting_id
     )
-
+    
+    helpers.make_room(room_name=params[:room][:name], room_id=meeting_id)
+    
     respond_to do |format|
       if @room.save
         format.html { redirect_to @room, notice: "Room was successfully created." }
