@@ -5,7 +5,7 @@
 	  <!-- User main avatar -->
       <div class="avatar-container">
         <div class="avatar">
-            <img src=<%="https://secure.gravatar.com/avatar/#{Digest::MD5.hexdigest(@user.email)}"%> width=172px height=172px />
+            <img src=<%="https://secure.gravatar.com/avatar/#{Digest::MD5.hexdigest(@user.email)}"%> width=150px height=150px />
         </div>
       </div>
     </div>
@@ -82,7 +82,14 @@
                 </p>
               </div>
               <div class="tweet-footer">
-                <a></a>
+                <% if room.user_id == current_user.id %>
+                    <a class="btn btn-success" href=<%= join_meeting(password=ENV['BBB_MP'], room_id=room.meetingID, name=current_user.username) %>>Join</a>
+                <% else %>
+                    <a class="btn btn-success" href=<%= join_meeting(password=ENV['BBB_AP'], room_id=room.meetingID, name=current_user.username) %>>Join</a>
+                <% end %>
+                <% if room.user_id == current_user.id %>
+                    <%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+                <% end %>
               </div>
             </div>
           </li>
