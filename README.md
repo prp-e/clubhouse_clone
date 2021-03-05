@@ -1,24 +1,22 @@
-# README
+# Do not be shy, join the club!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Recently [Club House](http://joinclubhouse.com) became pretty popular. So, I was curious how can I clone that? It was simple. I am a _FLOSS_ advocate since 2012, almost 12 freaking years! So I had some good tools. 
 
-Things you may want to cover:
+First, I thought about creating the whole thing from scratch, but I found out that we had a lot of fun using [Big Blue Button](https://bigbluebutton.org). I knew BBB uses a frontend platform/application called _Greenlight_, but it was like any other online event performing tool! Just a great tool for accounting and managing the event. So I had an idea, why not creating a whole __social media__ around BBB? So I started making this project. 
 
-* Ruby version
+## Requirements 
 
-* System dependencies
+_TO BE UPDATED_ 
 
-* Configuration
+* A Big Blue Button instance (only API is enough, do not install _Greenlight_)
+* An instance of this code!
+    * Rails deployment article will be available here as soon as I finish this project. 
 
-* Database creation
+## TODO 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [ ] Designing timeline, follower/following in the frontend side 
+- [ ] Connecting the whole thing to the _BBB_ instance (It should be done in some environment variable, maybe a `.env` file isn't a bad idea at all)
+- [ ] Migrating to MySQL 
+- [ ] Designing a nice UI 
+- [ ] Implementing the UI
+- [ ] Choosing a name, if I want this to be a startup!
