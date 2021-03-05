@@ -22,7 +22,12 @@ class RoomsController < ApplicationController
 
   # POST /rooms or /rooms.json
   def create
-    @room = current_user.rooms.build(room_params)
+    meeting_id = params[:room][:name].downcase.gsub(" ", "+") + "-" + current_user.username
+    @room = current_user.rooms.build(
+      :name => params[:room][:name],
+      :description => params[:room][:description],
+      :meetingID => meeting_id
+    )
 
     respond_to do |format|
       if @room.save
