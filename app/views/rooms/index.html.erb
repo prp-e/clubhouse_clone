@@ -20,9 +20,9 @@
         <td><%= room.meetingID %></td>
         <td>
           <% if room.user_id == current_user.id %>
-            <a href=<% join_meeting(password=ENV['BBB_MP'], name=current_user.username, room_id=room.meetingID) %>>Join</a>
+            <a href=<%= join_meeting(password=ENV['BBB_MP'], room_id=room.meetingID, name=current_user.username) %>>Join</a>
           <% else %>
-            <a href=<% join_meeting(password=ENV['BBB_AP'], name=current_user.username, room_id=room.meetingID) %>>Join</a>
+            <a href=<%= join_meeting(password=ENV['BBB_AP'], room_id=room.meetingID, name=current_user.username) %>>Join</a>
           <% end %>
         </td>
         <td><%= link_to 'Edit', edit_room_path(room) %></td>
