@@ -18,7 +18,13 @@
         <td><%= room.name %></td>
         <td><%= room.description %></td>
         <td><%= room.meetingID %></td>
-        <td><%= link_to 'Show', room %></td>
+        <td>
+          <% if room.user_id == current_user.id %>
+            <a href=<% join_room(password=ENV['BBB_MP'], name=current_user.username, room_id=room.meetingID) %>>Join</a>
+          <% else %>
+            <a href=<% join_room(password=ENV['BBB_AP'], name=current_user.username, room_id=room.meetingID) %>>Join</a>
+          <% end %>
+        </td>
         <td><%= link_to 'Edit', edit_room_path(room) %></td>
         <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
