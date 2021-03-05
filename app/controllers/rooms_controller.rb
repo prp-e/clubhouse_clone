@@ -13,7 +13,7 @@ class RoomsController < ApplicationController
 
   # GET /rooms/new
   def new
-    @room = Room.new
+    @room = current_user.rooms.build
   end
 
   # GET /rooms/1/edit
@@ -22,7 +22,7 @@ class RoomsController < ApplicationController
 
   # POST /rooms or /rooms.json
   def create
-    @room = Room.new(room_params)
+    @room = current_user.rooms.build(room_params)
 
     respond_to do |format|
       if @room.save
