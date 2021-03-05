@@ -24,6 +24,7 @@ class RoomsController < ApplicationController
   def create
     meeting_id = params[:room][:name].downcase.gsub(" ", "+") + "-" + current_user.username
     @room = current_user.rooms.build(
+      :user_id => current_user.id, 
       :name => params[:room][:name],
       :description => params[:room][:description],
       :meetingID => meeting_id
