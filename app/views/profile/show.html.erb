@@ -104,7 +104,9 @@
             <% if user_signed_in? %>
               <% if @user.id != current_user.id %>
                 <% if current_user.favorited?@user %>
+                    <div class="tweet-content">
                     <%= link_to 'Unfollow', "/profile/#{@user.id}/follows/#{pre_follow.id}", :method => :delete, :class => "btn btn-follow" %>
+                    </div>
                 <% else %>
                     <%= link_to 'Follow', profile_follows_path(@user), :method => :post, :class => "btn btn-follow"%>
                 <% end %>
