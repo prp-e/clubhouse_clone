@@ -14,7 +14,8 @@ _TO BE UPDATED_
 * Setting up `BBB_API`, `BBB_SECRET`, `BBB_MP` and `BBB_AP` environment variables (preferably in `bashrc` or `zshrc` files)
     * `BBB_API` is responsible for your BigBlueButton Server. 
     * `BBB_SECRET` is the _shared secret_ you can get from `bbb-conf --secret` on your BBB server. 
-    *
+    * `BBB_MP` is the moderator password for BBB 
+    * `BBB_AP` is the attendee password for BBB (Note: it's better to choose them differently)
 
 ## TODO 
 
