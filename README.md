@@ -11,6 +11,10 @@ _TO BE UPDATED_
 * A Big Blue Button instance (only API is enough, do not install _Greenlight_)
 * An instance of this code!
     * Rails deployment article will be available here as soon as I finish this project. 
+* Setting up `BBB_API`, `BBB_SECRET`, `BBB_MP` and `BBB_AP` environment variables (preferably in `bashrc` or `zshrc` files)
+    * `BBB_API` is responsible for your BigBlueButton Server. 
+    * `BBB_SECRET` is the _shared secret_ you can get from `bbb-conf --secret` on your BBB server. 
+    *
 
 ## TODO 
 
@@ -18,6 +22,6 @@ _TO BE UPDATED_
 - [x] Connecting the whole thing to the _BBB_ instance (It should be done in some environment variable, maybe a `.env` file isn't a bad idea at all)
     - [ ] Joining Mechanism
 - [ ] Migrating to MySQL 
-- [ ] Designing a nice UI 
+- [x] Designing a nice UI 
 - [ ] Implementing the UI
 - [ ] Choosing a name, if I want this to be a startup!
