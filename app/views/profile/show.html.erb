@@ -100,7 +100,14 @@
       <!-- End: Center content column -->
       <div class="col right-col">
         <div class="content-panel">
-            
+            <% pre_follow = @user.favorited.find {|follower| follower.favoritor_id == current_user.id} %>
+            <% if @user.id != current_user.id %>
+                <% if current_user.favorited?@user %>
+                    <%= link_to 'Unfollow', "/profile/#{@user.id}/follows/#{pre_follow.id}", :method => :delete %>
+                <% else %>
+                    <%= link_to 'Follow', profile_follows_path(@user), :method => :post %>
+                <% end %>
+            <%end %>
           <div class="panel-header">
             <!--END: Follow list -->
           </div>
