@@ -18,7 +18,7 @@ class FollowsController < ApplicationController
 
     private
     def find_user
-        @user = User.find(params[:profile_id])
+        @user = User.friendly.find(params[:profile_id])
     end
 
     def find_relationship

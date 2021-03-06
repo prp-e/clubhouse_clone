@@ -106,7 +106,7 @@
                 <% if current_user.favorited?@user %>
                     <%= link_to 'Unfollow', "/profile/#{@user.id}/follows/#{pre_follow.id}", :method => :delete, :class => "btn btn-follow" %>
                 <% else %>
-                    <%= link_to 'Follow', profile_follows_path(@user), :method => :post %>
+                    <%= link_to 'Follow', profile_follows_path(@user), :method => :post, :class => "btn btn-follow"%>
                 <% end %>
               <%end %>
             <% end %>
