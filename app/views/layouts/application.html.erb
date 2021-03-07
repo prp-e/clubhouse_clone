@@ -27,7 +27,7 @@
       </li>
       <li class="nav-item active" >
         <% if user_signed_in? %>
-          <%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "nav-link octicon oction-sign-out" %>
+          <%= link_to raw('<i class="octicon octicon-sign-out" aria-hidden="true"></i> Logout'), destroy_user_session_path, :method => :delete, :class => "nav-link" %>
         <% end %>
       </li>
     </ul>
