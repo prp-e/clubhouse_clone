@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :profile do 
     resources :follows 
   end
+  resources :timeline
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
